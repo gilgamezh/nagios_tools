@@ -75,7 +75,7 @@ def get_value(url, seconds=0):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Check graphite metrics for Nagios")
+        description="Alert on data, based on number from Graphite.")
 
     parser.add_argument("url", help="Graphite metric URL")
 
