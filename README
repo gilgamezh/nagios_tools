@@ -1,4 +1,5 @@
-Forked script written for Nagios, at Etsy.
+Forked script written for Nagios, at Etsy. 
+mail@gilgamezh.me 28/10/2014
 
 
 usage: check_graphite_data [-h] --warning WARNING --critical CRITICAL

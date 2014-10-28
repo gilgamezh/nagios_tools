@@ -42,10 +42,11 @@ def eval_graphite_data(data, seconds):
     # Second, if we requested more than on graphite sample period, work out how
     # many sample periods we wanted (python always rounds division *down*)
         data_points = (seconds/sample_period)
-        data_set = [ float(x) for x in all_data_points[-data_points:]
-                     if eval(x) ]
+        data_set = [float(x) for x in all_data_points[-data_points:]
+                    if eval(x)]
+
         if data_set:
-            data_value = float( sum(data_set) / len(data_set) )
+            data_value = float(sum(data_set) / len(data_set))
         else:
             data_value = 0.0
     return data_value
