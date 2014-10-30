@@ -1,7 +1,12 @@
-Forked script written for Nagios, at Etsy. 
-mail@gilgamezh.me 28/10/2014
 
 
+check_graphite_data
+===================
+
+Simple Python script to check a Graphite metric forked from one written at Etsy -->  https://github.com/etsy/nagios_tools
+
+
+```
 usage: check_graphite_data [-h] --warning WARNING --critical CRITICAL
                            [--reverse] [--secs SECS]
                            url
@@ -20,3 +25,4 @@ optional arguments:
   --reverse, -r         Reverse - Alert when the value is
                         UNDERwarning/critical instead of OVER
   --secs SECS, -s SECS  Average over the last N seconds of data
+```
