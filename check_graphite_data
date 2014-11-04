@@ -75,6 +75,7 @@ def get_value(url, seconds=0):
     data_value = eval_graphite_data(data, seconds)
     return data_value
 
+
 def main():
     parser = argparse.ArgumentParser(
         description="Alert on data, based on number from Graphite.")
@@ -101,10 +102,10 @@ def main():
 
     graphite_data = get_value(url, seconds)
 
-    print('Current value: %s, warn threshold: %s, crit threshold: %s' % \
-           (graphite_data, warning_th, critical_th))
+    print('Current value: %s, warn threshold: %s, crit threshold: %s' %
+          (graphite_data, warning_th, critical_th))
 
-    if reverse == True:
+    if reverse is True:
         if critical_th >= graphite_data:
             sys.exit(STATE_CRITICAL)
         elif warning_th >= graphite_data:
